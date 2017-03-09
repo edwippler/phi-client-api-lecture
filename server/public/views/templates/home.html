@@ -2,12 +2,17 @@
 
 <p>{{hc.message}}</p>
 
-<button ng-click="hc.getRandomPet()">Get Random Pet</button>
+<button ng-click="hc.getRandomDog()">Get Random Dog</button>
+<button ng-click="hc.getRandomPig()">Get Random Pig</button>
 
 <div class="row">
   <div class="col-md-12">
       <!-- hc.pet = response.data.petfinder.pet -->
     <h2>{{hc.pet.name.$t}}</h2>
     <p>{{hc.pet.description.$t}}</p>
+    <!-- {{hc.pet.media.photos.photo}} -->
+    <ul>
+      <li ng-repeat="pic in hc.pet.media.photos.photo"><img src="{{pic.$t}}" alt=""></li>
+  </ul>
   </div>
 </div>
